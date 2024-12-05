@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3x3 Image Matrix </title>
+  <style>
+    /* Global styles for black theme */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212; /* Dark background color */
+      color: white; /* White text color for contrast */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* Container for the image grid */
+    .image-container {
+      width: 90%; /* Container width */
+      margin: 0 auto; /* Centering the container */
+      padding: 20px;
+    }
+
+    /* Image styles */
+    .image-container img {
+      width: 30%; /* 3 images per row */
+      margin: 10px; /* Equal margin between the images */
+      border-radius: 10px; /* Optional: rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark shadow for more contrast */
+      object-fit: cover; /* Ensures images cover the entire space */
+      transition: transform 0.3s, filter 0.3s; /* Smooth transition for hover effect */
+    }
+
+    /* Hover effect on images */
+    .image-container img:hover {
+      transform: scale(1.1); /* Slight zoom-in effect */
+      filter: brightness(1.2) contrast(1.5); /* Increased brightness and contrast on hover */
+    }
+
+    /* Make sure to clear the float after each row */
+    .clearfix {
+      clear: both;
+    }
+
+    /* Optional: Styling for the grid container on hover */
+    .image-container:hover {
+      background-color: rgba(0, 0, 0, 0.5); /* Slightly darken the container on hover */
+    }
+
+    /* Optional: Add a heading to the page */
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>3x3 Image </h1>
+  <div class="image-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDgRBCKZqxI41RqNOxwgj-cQPtNUttzdlncw&s" alt="Image 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwIXEtwsEeO6vYyY1OQUV7PqrsdFBqAUWvog&s" alt="Image 2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHYoHoePlshl-Hj31jO1Ac6ySBqp7qulWDXQ&s" alt="Image 3">
+    <div class="clearfix"></div> <!-- Clear the float after first row -->
+    
+    <img src="data:image/jpeg;base64,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" alt="Image 4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuzC7SGZSkh8jiw4uJpmUOtZweI_VCoFm3QQ&s" alt="Image 5">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJPySJ92qM0KIGLpycT3FAvyWvgG1UnclB5Q&s" alt="Image 6">
+    <div class="clearfix"></div> <!-- Clear the float after second row -->
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4HQay6r0HlUVeeJWSHOjtQTG2CHC56OVhUw&s" alt="Image 7">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6q3Lro0hkOQoXwZ5vtzEKVjV9jq9QSSQGAg&s" alt="Image 8">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0gLSKjZ7GFI_jpR-nLc32h7q4Q-Y3fT0LQ&s" alt="Image 9">
+  </div>
+</body>
+</html>
